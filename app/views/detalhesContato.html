@@ -1,0 +1,31 @@
+
+<table class="table">
+    
+    <tr>
+        <th>Detalhes contato</th>
+        <th></th>
+    </tr>
+
+    <tr>
+        <td>Nome</td>
+        <td>{{contato.nome}}</td>
+    </tr>
+
+    <tr>
+        <td>Telefone</td>
+        <td>{{contato.telefone}}</td>
+    </tr>
+
+    <tr>
+        <td>Data Nascimento</td>
+        <td>{{contato.dataNascimento | date:'dd/MM/yyyy'}}</td>
+    </tr>
+    
+    <tr>
+        <td>Operadora</td>
+        <td>{{contato.operadora.nome}}</td>
+    </tr>
+
+</table>
+
+<a href="#/contatos" class="btn btn-default">Voltar</a>

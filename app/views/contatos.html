@@ -1,0 +1,31 @@
+<ui-Alert title="Ops" message="error" ng-if="error">
+    Eu tinha esquecido de colocar alguma coisa aqui, portanto fica difícil testar o transclude.
+</ui-Alert>
+
+<input type="text" ng-model="criterioBusca" placeholder="Digite sua pesquisa aqui." class="form-control" />
+
+<table class="table" ng-show="contatos.length > 0">
+
+    <tr>
+        <th></th>
+        <th><a href="" ng-click="ordenar('nome')">Nome</a></th>
+        <th><a href="" ng-click="ordenar('telefone')">Telefone</a></th>
+        <th>Operadora</th>
+        <th>Aniversário</th>
+    </tr>
+
+    <tr ng-repeat="contato in contatos | filter:{nome : criterioBusca} | orderBy:campoOrdenacao:direcaoOrdenacao" ng-class="{selecionado : contato.selecionado}">
+        <td>
+            <input type="checkbox" ng-model="contato.selecionado" />
+        </td>
+        <td><a href="#/detalhesContato/{{contato.id}}">{{contato.nome}}</a></td>
+        <td ng-bind="contato.telefone"></td>
+        <td>{{contato.operadora.nome | nome}}</td>
+        <td>{{contato.dataNascimento | date:'dd/MM/yyyy'}}</td>
+    </tr>
+
+</table>
+
+<a href="#/novoContato" class="btn btn-primary">Novo Contato</a>
+
+<button class="btn btn-danger" ng-click="apagarContatos(contatos)" ng-disabled="!algumContatoSelecionado(contatos)">Apagar contatos</button>

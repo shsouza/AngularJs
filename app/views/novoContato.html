@@ -1,0 +1,36 @@
+<form name="contatoForm">
+
+    <input class="form-control" type="text" ng-model="contato.nome" name="nome" placeholder="Insira seu nome" ng-required="true"
+        ng-minlength="3" />
+    <input class="form-control" type="text" ng-model="contato.telefone" name="telefone" placeholder="seu telefone" ng-required="true"
+        ng-pattern="/^\d{4,5}-\d{4}$/" />
+
+    <input class="form-control" type="text" ng-model="contato.dataNascimento" name="dataNascimento" placeholder="seu aniversário"
+        ui-data="" />
+
+    <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+        <option>Selecione uma operadora</option>
+    </select>
+
+    <div class="alert alert-danger" ng-show="contatoForm.$dirty && contatoForm.$invalid">
+        <div ng-messages="contatoForm.nome.$error">
+            <div ng-message="required">
+                Por favor, preencha o campo nome.
+            </div>
+            <div ng-message="minlength">
+                O campo nome deve ter pelo menos 10 caracteres.
+            </div>
+        </div>
+        <div ng-messages="contatoForm.telefone.$error">
+            <div ng-message="required">
+                Por favor, preencha o campo telefone.
+            </div>
+            <div ng-message="pattern">
+                O campo telefone deve ter o padrão 99999-9999.
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-primary" ng-click="adicionarContato(contato)" ng-disabled="contatoForm.$invalid">Adicionar Contato</button>
+    <a href="#/contatos" class="btn btn-default">Voltar</a>
+</form>

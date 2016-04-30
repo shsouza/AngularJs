@@ -1,0 +1,69 @@
+html,
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.2em;
+}
+
+.table {
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+.selecionado {
+background-color: lightyellow;
+}
+
+.ui-alert {
+    background-color: #ffAAAA;
+    margin-top:20px;
+    margin-bottom :20px;
+    border-radius: 5px;    
+    padding: 20px;
+}
+
+.ui-alert-title {
+    font-size: 18px;
+    color:red;
+    font-weight: bold;
+}
+
+.ui-alert-message {
+    color:red;
+}
+
+.accordium-title {
+    border-radius: 5px;   
+    background-color: dimgray;
+    font-size: 18px;
+    font-weight: bold;     
+    padding: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+}
+
+.navbar {
+    background: #00b5ec;
+}
+
+.navbar-brand {
+    font-size: 1.2em;
+}
+
+.view {
+    margin-top: 70px;
+    margin-bottom: 50px;
+}

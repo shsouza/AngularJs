@@ -1,0 +1,55 @@
+<html ng-app="listaTelefonica">
+<meta charset="utf-8" />
+
+<head>
+    <link rel="stylesheet" href="lib\bootstrap-3.3.6-dist\css\bootstrap.css">
+    <link rel="stylesheet" href="style\app.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">ListaTelefonica</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <div ng-view class="view"></div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">OldFaithful.</p>
+        </div>
+    </footer>
+
+</body>
+
+<script src="lib\angular-1.5.3\angular.js"></script>
+<script src="lib\angular-1.5.3\angular-messages.js"></script>
+<script src="lib\angular-1.5.3\angular-route.js"></script>
+
+<script src="scritps\app.js"></script>
+
+<script src="scritps\value\valueConfig.js"></script>
+
+<script src="scritps\services\contatoApiService.js"></script>
+<script src="scritps\services\operadoraApiService.js"></script>
+<script src="scritps\lib\ui\ui.js"></script>
+<script src="scritps\config\serialGeneratorConfig.js"></script>
+<script src="scritps\services\serialGeneratorProvider.js"></script>
+<script src="scritps\config\routeConfig.js"></script>
+<script src="scritps\filters\nomeFilter.js"></script>
+<script src="scritps\directives\uiAlertDirective.js"></script>
+<script src="scritps\directives\dataDirective.js"></script>
+
+<script src="scritps\controllers\contatoCtrl.js"></script>
+<script src="scritps\controllers\novoContatoCtrl.js"></script>
+<script src="scritps\controllers\detalhesContato.js"></script>
+
+</html>
